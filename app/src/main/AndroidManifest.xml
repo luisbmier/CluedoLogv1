@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ulpgc.luisbmier.android.cluedologv1"
-          android:installLocation="preferExternal">
+    package="com.ulpgc.luisbmier.android.cluedologv1"
+    android:installLocation="preferExternal" >
 
     <application
         android:allowBackup="true"
@@ -31,6 +32,14 @@
         <activity
             android:name=".controller.LogRoomsActivity"
             android:label="@string/title_activity_log_rooms" >
+        </activity>
+        <activity
+            android:name=".controller.LogActivity"
+            android:label="@string/title_activity_log"
+            android:parentActivityName=".controller.LogMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ulpgc.luisbmier.android.cluedologv1.controller.LogMainActivity" />
         </activity>
     </application>
 
