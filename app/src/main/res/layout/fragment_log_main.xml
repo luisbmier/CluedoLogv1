@@ -10,24 +10,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/setNames"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:id="@+id/renamePlayersButton"
         android:layout_gravity="center"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
-        android:layout_weight="1"
-        android:alpha="0.8"/>
+        android:layout_weight="1"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Log"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:id="@+id/logButton"
         android:layout_gravity="center"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
-        android:layout_weight="1"
-        android:alpha="0.8"/>
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Question"
+        android:textSize="30dp"
+        android:id="@+id/questionButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_weight="1"/>
 
 </LinearLayout>

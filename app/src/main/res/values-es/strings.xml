@@ -63,5 +63,8 @@
     <string name="wPatio_desc">Blanco tiene la Terraza</string>
     <string name="NewGame">Nueva Partida</string>
     <string name="setNames">Renombrar Jugadores</string>
+    <string name="Log">Bloc de Notas</string>
+    <string name="Question">Acusación</string>
+    <string name="title_activity_log">Bloc de Cluedo</string>
 
 </resources>

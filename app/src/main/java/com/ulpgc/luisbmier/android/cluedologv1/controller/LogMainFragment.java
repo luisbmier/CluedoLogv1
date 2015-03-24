@@ -1,6 +1,8 @@
 package com.ulpgc.luisbmier.android.cluedologv1.controller;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -22,13 +24,14 @@ public class LogMainFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     public static final String GAME_ID=
             "com.ulpgc.luisbmier.android.cluedologv1.game_id";
-
+    private static final Float ALPHA =0.8f;
 
     // TODO: Rename and change types of parameters
     private Game mGame;
 
     private Button mLogButton;
-    private Button mRenameButton;
+    private Button mRenamePlayersButton;
+    private Button mQuestion;
 
     private UUID mgameID;
 
@@ -73,15 +76,32 @@ public class LogMainFragment extends Fragment {
                 startActivity(i);
             }
         });
-        mRenameButton =new Button(getActivity());
-        mRenameButton =(Button)v.findViewById(R.id.renamePlayersButton);
-        mRenameButton.setOnClickListener(new View.OnClickListener() {
+        mRenamePlayersButton =new Button(getActivity());
+        mRenamePlayersButton =(Button)v.findViewById(R.id.renamePlayersButton);
+        mRenamePlayersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //TODO RenombrarJugadores
             }
         });
+        mQuestion=new Button (getActivity());
+        mQuestion =(Button)v.findViewById(R.id.questionButton);
+        mQuestion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO Funcion Question
+            }
+        });
+        transparent();
         return v;
+    }
+
+    @TargetApi(11)
+    private void transparent(){
+        mLogButton.setAlpha(ALPHA);
+        mRenamePlayersButton.setAlpha(ALPHA);
+        mQuestion.setAlpha(ALPHA);
+        return;
     }
 
 //    @Override

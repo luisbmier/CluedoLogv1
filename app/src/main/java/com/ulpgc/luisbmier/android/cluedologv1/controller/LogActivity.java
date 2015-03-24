@@ -131,9 +131,8 @@ public class LogActivity extends ActionBarActivity implements ActionBar.TabListe
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            //TODO: Esto esta mal referenciado
             UUID gameId=(UUID)getIntent()
-                    .getSerializableExtra(LogSuspectsFragment.GAME_ID);
+                    .getSerializableExtra(LogMainFragment.GAME_ID);
 
             switch (position){
                 case 0: return LogSuspectsFragment.newInstance(gameId);
