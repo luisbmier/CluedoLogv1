@@ -1,6 +1,7 @@
 package com.ulpgc.luisbmier.android.cluedologv1.controller;
 
 import java.util.Locale;
+import java.util.UUID;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -36,6 +37,7 @@ public class LogActivity extends ActionBarActivity implements ActionBar.TabListe
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +131,15 @@ public class LogActivity extends ActionBarActivity implements ActionBar.TabListe
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+            //TODO: Esto esta mal referenciado
+            UUID gameId=(UUID)getIntent()
+                    .getSerializableExtra(LogSuspectsFragment.GAME_ID);
+
+            switch (position){
+                case 0: return LogSuspectsFragment.newInstance(gameId);
+                case 1: return LogWeaponsFragment.newInstance(gameId);
+                case 2: return LogRoomsFragment.newInstance(gameId);
+            }
             return PlaceholderFragment.newInstance(position + 1);
         }
 
@@ -143,11 +154,11 @@ public class LogActivity extends ActionBarActivity implements ActionBar.TabListe
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return getString(R.string.title_section1).toUpperCase(l);
+                    return getString(R.string.Suspects).toUpperCase(l);
                 case 1:
-                    return getString(R.string.title_section2).toUpperCase(l);
+                    return getString(R.string.Weapons).toUpperCase(l);
                 case 2:
-                    return getString(R.string.title_section3).toUpperCase(l);
+                    return getString(R.string.Rooms).toUpperCase(l);
             }
             return null;
         }
@@ -181,7 +192,7 @@ public class LogActivity extends ActionBarActivity implements ActionBar.TabListe
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_log, container, false);
+            View rootView = inflater.inflate(R.layout.activity_fragment, container, false);
             return rootView;
         }
     }
