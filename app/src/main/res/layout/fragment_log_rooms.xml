@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:id="@+id/table"
+            android:stretchColumns="*">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:text="@string/players_title"
+                android:id="@+id/text_view_players"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TextView_Scarlet"
+                android:background="@color/red"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TextView_Mustard"
+                android:background="@color/yellow"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TextView_White"
+                android:background="@color/white"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TextView_Green"
+                android:background="@color/green"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TextView_Peacock"
+                android:background="@color/blue"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TextView_Plum"
+                android:background="@color/purple"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/Rooms"
+                        android:id="@+id/Text_View_Rooms"
+                        android:background="@color/white"/>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Kitchen"
+                            android:id="@+id/Text_View_Kitchen"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sKitchen"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/sKitchen_desc"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mKitchen"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/mKitchen_desc"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wKitchen"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/wKitchen_desc"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gKitchen"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/gKitchen_desc"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cKitchen"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/cKitchen_desc"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pKitchen"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/pKitchen_desc"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Patio"
+                            android:id="@+id/Text_View_Patio"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sPatio"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/sPatio_desc"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mPatio"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+                            android:contentDescription="@string/mPatio_desc"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wPatio"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+                            android:contentDescription="@string/wPatio_desc"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gPatio"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+                            android:contentDescription="@string/mPatio_desc"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cPatio"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+                            android:contentDescription="@string/mPatio_desc"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pPatio"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+                            android:contentDescription="@string/mPatio_desc"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Spa"
+                            android:id="@+id/Text_View_Spa"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sSpa"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mSpa"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wSpa"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gSpa"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cSpa"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pSpa"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Theatre"
+                            android:id="@+id/Text_View_Theatre"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sTheatre"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mTheatre"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wTheatre"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gTheatre"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cTheatre"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pTheatre"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/LivingRoom"
+                            android:id="@+id/Text_View_LivingRoom"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sLivingRoom"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mLivingRoom"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wLivingRoom"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gLivingRoom"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cLivingRoom"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pLivingRoom"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Observatory"
+                            android:id="@+id/Text_View_Observatory"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sObservatory"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mObservatory"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wObservatory"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gObservatory"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cObservatory"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pObservatory"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+					
+					<TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Hall"
+                            android:id="@+id/Text_View_Hall"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sHall"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mHall"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wHall"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gHall"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cHall"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pHall"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/GuestRoom"
+                            android:id="@+id/Text_View_GuestRoom"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sGuestRoom"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mGuestRoom"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wGuestRoom"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gGuestRoom"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cGuestRoom"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pGuestRoom"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/DinningRoom"
+                            android:id="@+id/Text_View_DinningRoom"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ImageView_sDinningRoom"
+                            android:background="@color/red"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_mDinningRoom"
+                            android:background="@color/yellow"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"
+                            android:longClickable="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_wDinningRoom"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_gDinningRoom"
+                            android:background="@color/green"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_cDinningRoom"
+                            android:background="@color/blue"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ImageView_pDinningRoom"
+                            android:background="@color/purple"
+                            android:layout_weight="1"
+                            android:src="@drawable/lupa"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="48dp"
+                            android:maxHeight="48dp"
+                            android:scaleType="fitCenter"/>
+
+                    </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

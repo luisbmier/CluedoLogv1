@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView android:id="@+id/game_list_item_titleTextView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:paddingLeft="4dp"
+              android:paddingRight="4dp"
+              android:text="@string/InsertNames"
+              android:background="@color/white"/>
+
+    <TextView android:id="@+id/game_list_item_dateTextView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/game_list_item_titleTextView"
+              android:paddingLeft="4dp"
+              android:paddingRight="4dp"
+              android:paddingTop="4dp"
+              android:text="@string/Insert_Date"
+              android:background="@color/white"/>
+<!--
+    <Button     android:id="@+id/button_NewGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/NewGame"
+                android:textSize="30sp"
+                android:alpha="0.8"
+                android:clickable="false"
+                android:layout_below="@+id/game_list_item_dateTextView"
+                android:layout_centerHorizontal="true"/>
+-->
+
+</RelativeLayout>

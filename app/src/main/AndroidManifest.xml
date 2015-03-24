@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ulpgc.luisbmier.android.cluedologv1"
+          android:installLocation="preferExternal">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".controller.ListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controller.LogMainActivity"
+            android:label="@string/title_activity_log_activity" >
+        </activity>
+        <activity
+            android:name=".controller.LogSuspectsActivity"
+            android:label="@string/title_activity_log_suspects" >
+        </activity>
+        <activity
+            android:name=".controller.LogWeaponsActivity"
+            android:label="@string/title_activity_log_weapons" >
+        </activity>
+        <activity
+            android:name=".controller.LogRoomsActivity"
+            android:label="@string/title_activity_log_rooms" >
+        </activity>
+    </application>
+
+</manifest>

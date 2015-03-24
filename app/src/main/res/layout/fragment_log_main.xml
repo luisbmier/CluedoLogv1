@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:background="@drawable/cluedohouse"
+             tools:context="com.ulpgc.luisbmier.android.cluedologv1.controller.LogMainFragment">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setNames"
+        android:textSize="30sp"
+        android:id="@+id/setNamesButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_weight="1"
+        android:alpha="0.8"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Suspects"
+        android:textSize="30sp"
+        android:id="@+id/SuspectsButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_weight="1"
+        android:alpha="0.8"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Weapons"
+        android:textSize="30sp"
+        android:id="@+id/WeaponsButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_weight="1"
+        android:alpha="0.8"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Rooms"
+        android:textSize="30sp"
+        android:id="@+id/RoomsButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_weight="1"
+        android:alpha="0.8"/>
+
+</LinearLayout>

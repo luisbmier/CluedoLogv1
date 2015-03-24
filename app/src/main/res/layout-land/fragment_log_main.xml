@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:background="@drawable/cluedohouseland"
+             tools:context="com.ulpgc.luisbmier.android.cluedologv1.controller.LogMainFragment">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Suspects"
+        android:textSize="40sp"
+        android:id="@+id/SuspectsButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="90dp"
+        android:layout_weight="1"
+        android:alpha="0.8"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Weapons"
+        android:textSize="40sp"
+        android:id="@+id/WeaponsButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="90dp"
+        android:layout_weight="1"
+        android:alpha="0.8"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Rooms"
+        android:textSize="40sp"
+        android:id="@+id/RoomsButton"
+        android:layout_gravity="center"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="90dp"
+        android:layout_weight="1"
+        android:alpha="0.8"/>
+
+</LinearLayout>
