@@ -92,7 +92,7 @@ public class LogMainFragment extends Fragment {
                 //TODO Funcion Question
             }
         });
-        if (Build.VERSION.SDK_INT>Build.VERSION_CODES.GINGERBREAD) {
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB) {
             transparent();
         }
         return v;
