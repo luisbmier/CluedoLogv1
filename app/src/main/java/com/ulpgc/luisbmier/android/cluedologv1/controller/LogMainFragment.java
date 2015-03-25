@@ -92,7 +92,9 @@ public class LogMainFragment extends Fragment {
                 //TODO Funcion Question
             }
         });
-        transparent();
+        if (Build.VERSION.SDK_INT>Build.VERSION_CODES.GINGERBREAD) {
+            transparent();
+        }
         return v;
     }
 
@@ -101,7 +103,6 @@ public class LogMainFragment extends Fragment {
         mLogButton.setAlpha(ALPHA);
         mRenamePlayersButton.setAlpha(ALPHA);
         mQuestion.setAlpha(ALPHA);
-        return;
     }
 
 //    @Override
