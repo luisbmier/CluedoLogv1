@@ -90,6 +90,9 @@ public class LogMainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //TODO Funcion Question
+                Intent i = new Intent(getActivity(), LogActivity.class);
+                i.putExtra(AccuseFragment.GAME_ID, mGame.getId());
+                startActivity(i);
             }
         });
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB) {

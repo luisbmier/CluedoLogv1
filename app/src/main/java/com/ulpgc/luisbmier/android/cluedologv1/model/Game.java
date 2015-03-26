@@ -11,10 +11,10 @@ public class Game {
     private UUID mId;
     private Date mDate;
 
-    private static int sSuspects=6;
-    private static int sWeapons=6;
-    private static int sRooms=9;
-    private static int sPlayers =6;
+    private final int nSuspects =6;
+    private final int nWeapons =6;
+    private final int nRooms =9;
+    private final int nPlayers =6;
 
     //Log variables
     private ArrayList<String> mNames;
@@ -27,7 +27,7 @@ public class Game {
     public Game() {
         mId = UUID.randomUUID();
         mDate = new Date();
-        mNames = new ArrayList<>(sPlayers);
+        mNames = new ArrayList<>(nPlayers);
         //TODO: Tomar estos strings del controlador.
         //NOTA: Se pude hacer cuando la app incluya la función NEW GAME
         mNames.add("Amapola");
@@ -37,9 +37,9 @@ public class Game {
         mNames.add("Celeste");
         mNames.add("Mora");
 
-        mSuspectsMatrix=new Matrix(sSuspects, sPlayers);
-        mWeaponsMatrix=new Matrix(sWeapons, sPlayers);
-        mRoomsMatrix=new Matrix(sRooms, sPlayers);
+        mSuspectsMatrix=new Matrix(nSuspects, nPlayers);
+        mWeaponsMatrix=new Matrix(nWeapons, nPlayers);
+        mRoomsMatrix=new Matrix(nRooms, nPlayers);
 
     }
 
@@ -141,19 +141,19 @@ public class Game {
         mDate = new Date();
     }
 
-    public static int getSuspects() {
-        return sSuspects;
+    public int getSuspects() {
+        return nSuspects;
     }
 
-    public static int getWeapons() {
-        return sWeapons;
+    public int getWeapons() {
+        return nWeapons;
     }
 
-    public static int getRooms() {
-        return sRooms;
+    public int getRooms() {
+        return nRooms;
     }
 
-    public static int getPlayers() {
-        return sPlayers;
+    public int getPlayers() {
+        return nPlayers;
     }
 }
