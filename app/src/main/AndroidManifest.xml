@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ulpgc.luisbmier.android.cluedologv1"
-    android:installLocation="preferExternal" >
+    android:installLocation="internalOnly" >
 
     <application
         android:allowBackup="true"
@@ -20,18 +20,6 @@
         <activity
             android:name=".controller.LogMainActivity"
             android:label="@string/title_activity_log_activity" >
-        </activity>
-        <activity
-            android:name=".controller.LogSuspectsActivity"
-            android:label="@string/title_activity_log_suspects" >
-        </activity>
-        <activity
-            android:name=".controller.LogWeaponsActivity"
-            android:label="@string/title_activity_log_weapons" >
-        </activity>
-        <activity
-            android:name=".controller.LogRoomsActivity"
-            android:label="@string/title_activity_log_rooms" >
         </activity>
         <activity
             android:name=".controller.LogActivity"
