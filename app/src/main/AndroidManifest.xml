@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ulpgc.luisbmier.android.cluedologv1"
-    android:installLocation="preferExternal" >
+          package="com.ulpgc.luisbmier.android.cluedolog"
+          android:installLocation="preferExternal" >
 
     <application
         android:allowBackup="true"
@@ -9,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".controller.ListActivity"
+            android:name="com.ulpgc.luisbmier.android.cluedolog.controller.ListActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,28 +17,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".controller.LogMainActivity"
+            android:name="com.ulpgc.luisbmier.android.cluedolog.controller.LogMainActivity"
             android:label="@string/title_activity_log_activity" >
         </activity>
         <activity
-            android:name=".controller.LogSuspectsActivity"
-            android:label="@string/title_activity_log_suspects" >
-        </activity>
-        <activity
-            android:name=".controller.LogWeaponsActivity"
-            android:label="@string/title_activity_log_weapons" >
-        </activity>
-        <activity
-            android:name=".controller.LogRoomsActivity"
-            android:label="@string/title_activity_log_rooms" >
-        </activity>
-        <activity
-            android:name=".controller.LogActivity"
+            android:name="com.ulpgc.luisbmier.android.cluedolog.controller.LogActivity"
             android:label="@string/title_activity_log"
-            android:parentActivityName=".controller.LogMainActivity" >
+            android:parentActivityName="com.ulpgc.luisbmier.android.cluedolog.controller.LogMainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.ulpgc.luisbmier.android.cluedologv1.controller.LogMainActivity" />
+                android:value="com.ulpgc.luisbmier.android.cluedolog.controller.LogMainActivity" />
         </activity>
     </application>
 

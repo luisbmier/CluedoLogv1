@@ -66,5 +66,6 @@
     <string name="title_activity_log">LogActivity</string>
     <string name="Log">Log</string>
     <string name="Question">Question</string>
+    <string name="notImplemented">Not Implemented</string>
 
 </resources>

@@ -1,15 +1,15 @@
-package com.ulpgc.luisbmier.android.cluedologv1.controller;
+package com.ulpgc.luisbmier.android.cluedolog.controller;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ulpgc.luisbmier.android.cluedologv1.R;
-import com.ulpgc.luisbmier.android.cluedologv1.model.Cell;
-import com.ulpgc.luisbmier.android.cluedologv1.model.Game;
-import com.ulpgc.luisbmier.android.cluedologv1.model.GameLab;
-import com.ulpgc.luisbmier.android.cluedologv1.model.Matrix;
+import com.ulpgc.luisbmier.android.cluedolog.R;
+import com.ulpgc.luisbmier.android.cluedolog.model.Cell;
+import com.ulpgc.luisbmier.android.cluedolog.model.Game;
+import com.ulpgc.luisbmier.android.cluedolog.model.GameLab;
+import com.ulpgc.luisbmier.android.cluedolog.model.Matrix;
 
 import java.util.UUID;
 
@@ -18,9 +18,9 @@ import java.util.UUID;
  */
 public abstract class SingleSWRFragment extends Fragment{
     public static final String GAME_ID=
-            "com.ulpgc.luisbmier.android.cluedologv1.game_id";
+            "com.ulpgc.luisbmier.android.cluedolog.game_id";
     protected Game mGame;
-    protected final int nPlayers=mGame.getPlayers();
+    protected int PLAYERS;
     protected TextView[] mPlayers;
     protected int[] mPlayersIds={   R.id.TextView_Scarlet,
                                     R.id.TextView_Mustard,
@@ -38,7 +38,7 @@ public abstract class SingleSWRFragment extends Fragment{
     }
 
     protected void updateName() {
-        for (int i=0;i<nPlayers;i++){
+        for (int i=0;i<PLAYERS;i++){
             mGame.setName(mPlayers[i].getText().toString(),i);
         }
     }
@@ -74,7 +74,7 @@ public abstract class SingleSWRFragment extends Fragment{
     protected int[] identifyCell(int id, int nRows, int[][] IVid) {
         int[] i={0,0};
         for(i[0]=0;i[0]<nRows;i[0]++){
-            for(i[1]=0;i[1]<nPlayers;i[1]++){
+            for(i[1]=0;i[1]<PLAYERS;i[1]++){
                 if(IVid[i[0]][i[1]]==id){
                     return i;
                 }
@@ -84,6 +84,7 @@ public abstract class SingleSWRFragment extends Fragment{
         i[1]=-1;
         return i;
     }
+
     protected void updateCell(int f, int c, ImageView imageView) {
         Cell cell= mMatrix.getCell(f, c);
         cell.updateState();
@@ -95,6 +96,7 @@ public abstract class SingleSWRFragment extends Fragment{
         super.onCreate(savedInstanceState);
         UUID gameID=(UUID)getArguments().getSerializable(GAME_ID);
         mGame= GameLab.get(getActivity()).getGame(gameID);
+        PLAYERS=mGame.getPlayers();
     }
 
     @Override

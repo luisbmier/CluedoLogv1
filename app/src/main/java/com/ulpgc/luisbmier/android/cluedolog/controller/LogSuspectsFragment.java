@@ -1,4 +1,4 @@
-package com.ulpgc.luisbmier.android.cluedologv1.controller;
+package com.ulpgc.luisbmier.android.cluedolog.controller;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ulpgc.luisbmier.android.cluedologv1.R;
+import com.ulpgc.luisbmier.android.cluedolog.R;
 
 import java.util.UUID;
 
 public class LogSuspectsFragment extends SingleSWRFragment {
     private static final String Tag="SuspectsFragment";
-    private final int nSuspects=mGame.getSuspects();
+    private int nSuspects;
     int[][] mImageIds={{R.id.ImageView_sScarlet,
                         R.id.ImageView_mScarlet,
                         R.id.ImageView_wScarlet,
@@ -52,17 +52,16 @@ public class LogSuspectsFragment extends SingleSWRFragment {
                         R.id.ImageView_cPlum,
                         R.id.ImageView_pPlum}};
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_log_suspects, parent, false);
         Log.d(Tag,"ViewID= " + Integer.toString(v.getId()));
         //mTitlePlayers = (TextView)v.findViewById(R.id.text_view_players);
-
-        mPlayers = new TextView[nPlayers];
-        mImageMatrix = new ImageView[nSuspects][nPlayers];
+        nSuspects=mGame.getSuspects();
+        mPlayers = new TextView[PLAYERS];
+        mImageMatrix = new ImageView[nSuspects][PLAYERS];
         mMatrix=mGame.getSuspectsMatrix();
-        for (int i=0;i<nPlayers;i++){
+        for (int i=0;i<PLAYERS;i++){
             mPlayers[i]=((TextView)v.findViewById(mPlayersIds[i]));
             refreshName(i);
             for (int j=0;j<nSuspects;j++){

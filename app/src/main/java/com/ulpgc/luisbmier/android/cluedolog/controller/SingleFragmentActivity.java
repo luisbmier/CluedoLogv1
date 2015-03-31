@@ -1,4 +1,4 @@
-package com.ulpgc.luisbmier.android.cluedologv1.controller;
+package com.ulpgc.luisbmier.android.cluedolog.controller;
 
 import android.os.Bundle;
 
@@ -12,14 +12,14 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.ulpgc.luisbmier.android.cluedologv1.R.layout.activity_fragment);
+        setContentView(com.ulpgc.luisbmier.android.cluedolog.R.layout.activity_fragment);
         FragmentManager manager = getSupportFragmentManager();
-        Fragment fragment = manager.findFragmentById(com.ulpgc.luisbmier.android.cluedologv1.R.id.fragmentContainer);
+        Fragment fragment = manager.findFragmentById(com.ulpgc.luisbmier.android.cluedolog.R.id.fragmentContainer);
 
         if (fragment == null) {
             fragment = createFragment();
             manager.beginTransaction()
-                    .add(com.ulpgc.luisbmier.android.cluedologv1.R.id.fragmentContainer, fragment)
+                    .add(com.ulpgc.luisbmier.android.cluedolog.R.id.fragmentContainer, fragment)
                     .commit();
         }
     }

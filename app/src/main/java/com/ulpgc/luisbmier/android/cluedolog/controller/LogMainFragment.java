@@ -1,4 +1,4 @@
-package com.ulpgc.luisbmier.android.cluedologv1.controller;
+package com.ulpgc.luisbmier.android.cluedolog.controller;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -10,10 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
-import com.ulpgc.luisbmier.android.cluedologv1.R;
-import com.ulpgc.luisbmier.android.cluedologv1.model.Game;
-import com.ulpgc.luisbmier.android.cluedologv1.model.GameLab;
+import com.ulpgc.luisbmier.android.cluedolog.R;
+import com.ulpgc.luisbmier.android.cluedolog.model.Game;
+import com.ulpgc.luisbmier.android.cluedolog.model.GameLab;
 
 import java.util.UUID;
 
@@ -23,7 +24,7 @@ public class LogMainFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     public static final String GAME_ID=
-            "com.ulpgc.luisbmier.android.cluedologv1.game_id";
+            "com.ulpgc.luisbmier.android.cluedolog.game_id";
     private static final Float ALPHA =0.8f;
 
     // TODO: Rename and change types of parameters
@@ -82,6 +83,8 @@ public class LogMainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //TODO RenombrarJugadores
+                Toast toast = Toast.makeText(getActivity(), R.string.notImplemented, Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
         mQuestion=new Button (getActivity());
@@ -90,9 +93,8 @@ public class LogMainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //TODO Funcion Question
-                Intent i = new Intent(getActivity(), LogActivity.class);
-                i.putExtra(AccuseFragment.GAME_ID, mGame.getId());
-                startActivity(i);
+                Toast toast = Toast.makeText(getActivity(), R.string.notImplemented, Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB) {
@@ -107,29 +109,6 @@ public class LogMainFragment extends Fragment {
         mRenamePlayersButton.setAlpha(ALPHA);
         mQuestion.setAlpha(ALPHA);
     }
-
-//    @Override
-//    public void onAttach(Activity activity) {
-//        super.onAttach(activity);
-//        try {
-//            mListener = (OnFragmentInteractionListener) activity;
-//        } catch (ClassCastException e) {
-//            throw new ClassCastException(activity.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
-
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
 
     @Override
     public void onResume(){

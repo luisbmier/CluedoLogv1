@@ -1,4 +1,4 @@
-package com.ulpgc.luisbmier.android.cluedologv1.controller;
+package com.ulpgc.luisbmier.android.cluedolog.controller;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -13,15 +13,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.ulpgc.luisbmier.android.cluedologv1.R;
-import com.ulpgc.luisbmier.android.cluedologv1.model.Game;
-import com.ulpgc.luisbmier.android.cluedologv1.model.GameLab;
+import com.ulpgc.luisbmier.android.cluedolog.R;
+import com.ulpgc.luisbmier.android.cluedolog.model.Game;
+import com.ulpgc.luisbmier.android.cluedolog.model.GameLab;
 
 public class GameListFragment extends android.support.v4.app.ListFragment {
 	
 	private static final String TAG = "GameListFragment";
 
-    public static final String GAME_ID = "com.ulpgc.luisbmier.android.cluedologv1.game_id";
+    public static final String GAME_ID = "com.ulpgc.luisbmier.android.cluedolog.game_id";
     private UUID mId;
 
     private ArrayList<Game> mGames;
@@ -65,16 +65,16 @@ public class GameListFragment extends android.support.v4.app.ListFragment {
             // if we weren't given a view, inflate one
             if (null == convertView) {
                 convertView = getActivity().getLayoutInflater()
-                    .inflate(com.ulpgc.luisbmier.android.cluedologv1.R.layout.list_item_game, null);
+                    .inflate(com.ulpgc.luisbmier.android.cluedolog.R.layout.list_item_game, null);
             }
 
             Game g = getItem(position);
 
             TextView titleTextView =
-                (TextView)convertView.findViewById(com.ulpgc.luisbmier.android.cluedologv1.R.id.game_list_item_titleTextView);
+                (TextView)convertView.findViewById(com.ulpgc.luisbmier.android.cluedolog.R.id.game_list_item_titleTextView);
             titleTextView.setText(g.getNames().toString());
             TextView dateTextView =
-                (TextView)convertView.findViewById(com.ulpgc.luisbmier.android.cluedologv1.R.id.game_list_item_dateTextView);
+                (TextView)convertView.findViewById(com.ulpgc.luisbmier.android.cluedolog.R.id.game_list_item_dateTextView);
 
 
             setDate(g,dateTextView);

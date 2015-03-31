@@ -1,9 +1,7 @@
-package com.ulpgc.luisbmier.android.cluedologv1.model;
+package com.ulpgc.luisbmier.android.cluedolog.model;
 
 
-import android.app.Activity;
-
-import com.ulpgc.luisbmier.android.cluedologv1.R;
+import com.ulpgc.luisbmier.android.cluedolog.R;
 
 /**
  * Created by user on 25/03/2015.

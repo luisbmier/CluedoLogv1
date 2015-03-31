@@ -1,4 +1,4 @@
-package com.ulpgc.luisbmier.android.cluedologv1.controller;
+package com.ulpgc.luisbmier.android.cluedolog.controller;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ulpgc.luisbmier.android.cluedologv1.R;
+import com.ulpgc.luisbmier.android.cluedolog.R;
 
 import java.util.UUID;
 
 public class LogRoomsFragment extends SingleSWRFragment {
     private static final String Tag="RoomsFragment";
-    private final int nRooms=mGame.getRooms();
+    private int nRooms;
     int[][] mImageIds={{R.id.ImageView_sKitchen,
                         R.id.ImageView_mKitchen,
                         R.id.ImageView_wKitchen,
@@ -75,11 +75,11 @@ public class LogRoomsFragment extends SingleSWRFragment {
         View v = inflater.inflate(R.layout.fragment_log_rooms, parent, false);
         Log.d(Tag,"ViewID= " + Integer.toString(v.getId()));
         //mTitlePlayers = (TextView)v.findViewById(R.id.text_view_players);
-
-        mPlayers = new TextView[nPlayers];
-        mImageMatrix = new ImageView[nRooms][nPlayers];
+        nRooms=mGame.getRooms();
+        mPlayers = new TextView[PLAYERS];
+        mImageMatrix = new ImageView[nRooms][PLAYERS];
         mMatrix=mGame.getRoomsMatrix();
-        for (int i=0;i<nPlayers;i++){
+        for (int i=0;i<PLAYERS;i++){
             mPlayers[i]=((TextView)v.findViewById(mPlayersIds[i]));
             refreshName(i);
             for (int j=0;j<nRooms;j++){

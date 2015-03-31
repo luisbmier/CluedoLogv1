@@ -1,4 +1,4 @@
-package com.ulpgc.luisbmier.android.cluedologv1.controller;
+package com.ulpgc.luisbmier.android.cluedolog.controller;
 
 import java.util.Locale;
 import java.util.UUID;
@@ -11,15 +11,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.ulpgc.luisbmier.android.cluedologv1.R;
+import com.ulpgc.luisbmier.android.cluedolog.R;
 
 public class LogActivity extends ActionBarActivity implements ActionBar.TabListener {
 

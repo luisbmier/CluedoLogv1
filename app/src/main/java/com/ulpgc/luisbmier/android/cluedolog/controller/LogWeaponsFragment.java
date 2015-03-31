@@ -1,4 +1,4 @@
-package com.ulpgc.luisbmier.android.cluedologv1.controller;
+package com.ulpgc.luisbmier.android.cluedolog.controller;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ulpgc.luisbmier.android.cluedologv1.R;
+import com.ulpgc.luisbmier.android.cluedolog.R;
 
 import java.util.UUID;
 
 public class LogWeaponsFragment extends SingleSWRFragment {
     private static final String Tag="WeaponsFragment";
-    private final int nWeapons=mGame.getWeapons();
+    private int nWeapons;
     int[][] mImageIds={{R.id.ImageView_sKnife,
                         R.id.ImageView_mKnife,
                         R.id.ImageView_wKnife,
@@ -57,11 +57,11 @@ public class LogWeaponsFragment extends SingleSWRFragment {
         View v = inflater.inflate(R.layout.fragment_log_weapons, parent, false);
         Log.d(Tag,"ViewID= " + Integer.toString(v.getId()));
         //mTitlePlayers = (TextView)v.findViewById(R.id.text_view_players);
-
-        mPlayers = new TextView[nPlayers];
-        mImageMatrix = new ImageView[nWeapons][nPlayers];
+        nWeapons=mGame.getWeapons();
+        mPlayers = new TextView[PLAYERS];
+        mImageMatrix = new ImageView[nWeapons][PLAYERS];
         mMatrix=mGame.getWeaponsMatrix();
-        for (int i=0;i<nPlayers;i++){
+        for (int i=0;i<PLAYERS;i++){
             mPlayers[i]=((TextView)v.findViewById(mPlayersIds[i]));
             refreshName(i);
             for (int j=0;j<nWeapons;j++){

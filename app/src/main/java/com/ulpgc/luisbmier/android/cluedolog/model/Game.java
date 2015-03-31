@@ -1,4 +1,4 @@
-package com.ulpgc.luisbmier.android.cluedologv1.model;
+package com.ulpgc.luisbmier.android.cluedolog.model;
 
 import android.util.Log;
 
