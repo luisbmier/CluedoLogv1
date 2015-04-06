@@ -3,6 +3,7 @@ package com.ulpgc.luisbmier.android.cluedolog.controller;
 import java.util.Locale;
 import java.util.UUID;
 
+import android.nfc.Tag;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +22,7 @@ import android.view.ViewGroup;
 import com.ulpgc.luisbmier.android.cluedolog.R;
 
 public class LogActivity extends ActionBarActivity implements ActionBar.TabListener {
-
+    private static final String Tag="LogActivity";
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -75,6 +77,7 @@ public class LogActivity extends ActionBarActivity implements ActionBar.TabListe
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+
     }
 
 
@@ -91,13 +94,16 @@ public class LogActivity extends ActionBarActivity implements ActionBar.TabListe
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Log.d(Tag,"ActionBar Item selected: id=" + Integer.toHexString(id));
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
-        return super.onOptionsItemSelected(item);
+        //TODO: identificar la flecha en el actionBar en vez de actuar como última opción
+        onBackPressed();
+        return true;
+        //return super.onOptionsItemSelected(item);
     }
 
     @Override

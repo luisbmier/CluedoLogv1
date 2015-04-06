@@ -3,7 +3,7 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context=".MainActivity">
     <item android:id="@+id/action_settings"
-          android:title="@string/Mustard"
+          android:title="@string/title_activity_log"
           android:orderInCategory="100"
           app:showAsAction="never"/>
 </menu>
